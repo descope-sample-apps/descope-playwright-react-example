@@ -16,7 +16,8 @@ Then create a Management key if you do not currently have one [here](https://app
 
 When you create the management key, ensure it is associated with the project you are testing with.
 
-Then set your environment variables within a .env file at the root of the directory:
+Then set your environment variables within a .env file at the root of the directory (you can use the `.env.example` file):
+
 ```
 REACT_APP_DESCOPE_PROJECT_ID="YOUR PROJECT ID" // Required for Descope authentication
 REACT_APP_DESCOPE_SIGN_IN_FLOW_ID="sign-up-or-in" // Optional, if you would like to use a flow other than sign-up-or-in
