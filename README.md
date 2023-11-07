@@ -2,6 +2,27 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Setup
+
+### Install Dependencies
+
+First install the dependencies by running `yarn install`
+
+### Setup Environment Variables
+
+Capture your project ID from the [Project Settings Page](https://app.descope.com/settings/project)
+
+Then create a Management key if you do not currently have one [here](https://app.descope.com/settings/company/managementkeys).
+
+When you create the management key, ensure it is associated with the project you are testing with.
+
+Then set your environment variables within a .env file at the root of the directory:
+```
+REACT_APP_DESCOPE_PROJECT_ID="YOUR PROJECT ID" // Required for Descope authentication
+REACT_APP_DESCOPE_SIGN_IN_FLOW_ID="sign-up-or-in" // Optional, if you would like to use a flow other than sign-up-or-in
+DESCOPE_MANAGEMENT_KEY="YOUR MANAGEMENT KEY" // Optional, if you would like to run E2E tests
+```
+
 ## Available Scripts
 
 In the project directory, you can run:

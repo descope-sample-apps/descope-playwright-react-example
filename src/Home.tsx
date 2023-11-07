@@ -1,4 +1,4 @@
-import { SignUpOrInFlow, useSession, useUser } from "@descope/react-sdk";
+import { Descope, useSession, useUser } from "@descope/react-sdk";
 import "./Home.css";
 
 function Home() {
@@ -14,7 +14,15 @@ function Home() {
         ) : isAuthenticated ? (
           <p>Hello, {user.userId}</p>
         ) : (
-          <SignUpOrInFlow />
+          <Descope
+          flowId={
+            process.env.REACT_APP_DESCOPE_SIGN_IN_FLOW_ID || "sign-up-or-in"
+          }
+          onSuccess={(e) => {
+            console.log("Logged in!");
+          }}
+          onError={(e) => console.log("Error!")}
+        />
         )}
       </header>
     </div>
