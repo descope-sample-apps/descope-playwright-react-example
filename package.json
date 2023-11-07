@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@descope/react-sdk": "^1.0.14",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
@@ -20,6 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "e2e": "playwright test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +41,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@descope/node-sdk": "^1.6.0",
+    "@playwright/test": "^1.39.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
+    "prettier": "^3.0.3"
   }
 }
