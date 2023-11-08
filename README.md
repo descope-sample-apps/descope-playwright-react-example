@@ -1,22 +1,43 @@
-# Getting Started with Create React App
+<img width="1400" alt="playwright sample app repo banner" src="https://github.com/descope-sample-apps/descope-playwright-example/assets/32936811/e6fbcdb7-4418-4766-8703-a97f3e4e40a2">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Setup
 
-### Install Dependencies
+# Playwright Sample App with Descope Management SDK
 
-First install the dependencies by running `yarn install`
+This sample app demonstrates the integration of Descope authentication within a web application tested using Playwright's end-to-end testing capabilities. The app allows users to log in, and once authenticated, displays the user ID. It includes e2e tests to create a test user with the Descope Management SDK.
 
-### Setup Environment Variables
+## Table of Contents 📝
 
-Capture your project ID from the [Project Settings Page](https://app.descope.com/settings/project)
+1. [Installation](#installation)
+2. [Setting Up Testing Environment](#setting-up-testing-environment)
+3. [Running the Application](#running-the-application)
+4. [Running Tests](#running-tests)
+5. [Contributing](#contributing)
+6. [Issue Reporting](#issue-reporting)
+7. [License](#license)
 
-Then create a Management key if you do not currently have one [here](https://app.descope.com/settings/company/managementkeys).
+## Installation 💿
 
-When you create the management key, ensure it is associated with the project you are testing with.
+To get started with this app, clone the repository and install dependencies:
 
-Then set your environment variables within a .env file at the root of the directory (you can use the `.env.example` file):
+```bash
+git clone https://github.com/your-username/playwright-descope-sample-app.git
+cd playwright-descope-sample-app
+npm install
+```
+
+## Setting Up Testing Environment 🌐
+
+Before running the tests, ensure that you have set up your environment variables correctly by following these steps:
+
+1. Get your Project ID from the [Project Settings Page](https://app.descope.com/settings/project)
+
+2. Then, create a Management key if you do not currently have one [here](https://app.descope.com/settings/company/managementkeys).
+
+> **NOTE:** When you create the management key, ensure it is associated with the project you are testing with.
+
+3. Set your environment variables within a .env file at the root of the directory (you can use the `.env.example` file):
 
 ```
 REACT_APP_DESCOPE_PROJECT_ID="YOUR PROJECT ID" // Required for Descope authentication
@@ -24,45 +45,38 @@ REACT_APP_DESCOPE_SIGN_IN_FLOW_ID="sign-up-or-in" // Optional, if you would like
 DESCOPE_MANAGEMENT_KEY="YOUR MANAGEMENT KEY" // Optional, if you would like to run E2E tests
 ```
 
-## Available Scripts
+After this, you're ready to run the application, and also the playwright end-to-end tests.
 
-In the project directory, you can run:
+## Running the Application 🚀
 
-### `yarn start`
+To run the app locally, execute:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+npm start
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Navigate to `http://localhost:3000/` to see the app in action.
 
-### `yarn test`
+## Running Tests 🧪
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The e2e tests can be run using the following command:
 
-### `yarn build`
+```bash
+npx playwright test
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> **NOTE:** If you don't already have playwright installed, you'll need to install it using the following command: `npx playwright install`. If you're on a linux/mac system, you might also need to run `npx playwright install msedge` to run the Microsoft Edge tests locally, from the root user.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The test setup script uses the Descope SDK to create a test user and logs them in using a magic link to simulate authentication for testing purposes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing 🤝
 
-### `yarn eject`
+Contributions are welcome! Please feel free to submit a pull request with your improvements or bug fixes.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Issue Reporting ⚠️
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you encounter any issues or have suggestions for improvements, please report them by opening an issue in this repository.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## License 📜
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
