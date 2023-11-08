@@ -1,8 +1,9 @@
-<img width="1400" alt="playwright sample app repo banner" src="https://github.com/descope-dev/descope-cf-worker/assets/32936811/db891324-d389-41ce-bb02-a570a6f0cc60">
+<img width="1400" alt="playwright sample app repo banner" src="https://github.com/descope-sample-apps/descope-playwright-example/assets/32936811/e6fbcdb7-4418-4766-8703-a97f3e4e40a2">
 
 ---
 
-# Playwright Sample App with Descope Authentication
+
+# Playwright Sample App with Descope Management SDK
 
 This sample app demonstrates the integration of Descope authentication within a web application tested using Playwright's end-to-end testing capabilities. The app allows users to log in, and once authenticated, displays the user ID. It includes e2e tests to create a test user with the Descope Management SDK.
 
