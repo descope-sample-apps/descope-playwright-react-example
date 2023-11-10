@@ -2,7 +2,6 @@
 
 ---
 
-
 # Playwright Sample App with Descope Management SDK
 
 This sample app demonstrates the integration of Descope authentication within a web application tested using Playwright's end-to-end testing capabilities. The app allows users to log in, and once authenticated, displays the user ID. It includes e2e tests to create a test user with the Descope Management SDK.
@@ -43,6 +42,7 @@ Before running the tests, ensure that you have set up your environment variables
 REACT_APP_DESCOPE_PROJECT_ID="YOUR PROJECT ID" // Required for Descope authentication
 REACT_APP_DESCOPE_SIGN_IN_FLOW_ID="sign-up-or-in" // Optional, if you would like to use a flow other than sign-up-or-in
 DESCOPE_MANAGEMENT_KEY="YOUR MANAGEMENT KEY" // Optional, if you would like to run E2E tests
+PLAYWRIGHT_TEST_BASE_URL="Deployment Status Target URL" // For running e2e tests in deployed app (not localhost)
 ```
 
 After this, you're ready to run the application, and also the playwright end-to-end tests.
