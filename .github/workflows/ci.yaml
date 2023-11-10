@@ -18,6 +18,22 @@ jobs:
       - name: Run tests
         run: yarn test
 
+  run-e2es:
+    name: Run end-to-end tests (with deployed app)
+    if: github.event_name == 'deployment_status' && github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - name: Install dependencies
+        run: npm install -g pnpm && pnpm install
+      - name: Install playwright browsers
+        run: pnpm exec playwright install --with-deps
+      - name: Run tests
+        run: pnpm exec playwright test
+        env:
+          PLAYWRIGHT_TEST_BASE_URL: ${{ github.event.deployment_status.target_url }}
+
   tests_e2e:
     name: Run end-to-end tests
     runs-on: ubuntu-latest
