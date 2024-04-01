@@ -1,8 +1,8 @@
-<img width="1400" alt="playwright sample app repo banner" src="https://github.com/descope-sample-apps/descope-playwright-example/assets/32936811/e6fbcdb7-4418-4766-8703-a97f3e4e40a2">
+<img width="1400" alt="Screenshot 2024-04-01 at 1 18 04 PM" src="https://github.com/descope-sample-apps/descope-playwright-react-example/assets/32936811/9f39fcac-1cf5-402b-a10e-477f4b9a4351">
 
 ---
 
-# Playwright Sample App with Descope Management SDK
+# Playwright / React Sample App with Descope
 
 This sample app demonstrates the integration of Descope authentication within a web application tested using Playwright's end-to-end testing capabilities. The app allows users to log in, and once authenticated, displays the user ID. It includes e2e tests to create a test user with the Descope Management SDK.
 
@@ -21,8 +21,8 @@ This sample app demonstrates the integration of Descope authentication within a 
 To get started with this app, clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/playwright-descope-sample-app.git
-cd playwright-descope-sample-app
+git clone https://github.com/descope-sample-apps/descope-playwright-react-example
+cd descope-playwright-react-example
 npm install
 ```
 
