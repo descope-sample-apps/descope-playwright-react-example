@@ -12,7 +12,7 @@ function Home() {
         {isSessionLoading || isUserLoading ? (
           <>Loading..</>
         ) : isAuthenticated ? (
-          <p>Hello, {user.userId}</p>
+          <p>Hi, {user.userId}</p>
         ) : (
           <Descope
           flowId={
